@@ -1,0 +1,41 @@
+@import "./addition/_reset.css";
+@import "./addition/mixin";
+@import "./addition/vars";
+
+@import "./components/header";
+@import "./components/main";
+@import "./components/features";
+@import "./components/users";
+@import "./components/manage";
+@import "./components/footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+[class*="__container"] {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width: 1550px) {
+  [class*="__container"] {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
+  }
+}
+
+.background {
+  background: linear-gradient(
+    164.23deg,
+    #064d5e 0%,
+    #00546d 20.18%,
+    #013050 59.04%,
+    #003054 93.86%
+  );
+  min-height: 100vh;
+}

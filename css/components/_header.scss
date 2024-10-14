@@ -1,0 +1,110 @@
+.header {
+  position: relative;
+  &__burger-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+    z-index: 9999;
+    span {
+      background-color: red;
+      width: 30px;
+      height: 5px;
+      border-radius: 100px;
+      background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
+    }
+    @media (max-width: 650px) {
+      display: flex;
+    }
+  }
+
+  .ananas {
+    position: absolute;
+    content: "";
+    background-image: url("../img/header/ananas.png");
+    background-repeat: no-repeat;
+    top: 0;
+    left: -10px;
+    background-size: contain;
+    width: 87.14px;
+    height: 100%;
+    z-index: 1;
+    //130 = 80
+    width: clamp(5rem, 4.038rem + 4.81vw, 8.125rem);
+    height: clamp(8.125rem, 6.875rem + 6.25vw, 12.188rem);
+    @media (max-width: 1625px) {
+      opacity: 0.7;
+    }
+    @media (max-width: 798px) {
+      display: none;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    gap: 25px;
+    width: 100%;
+  }
+
+  &__logo {
+    text-transform: uppercase;
+    color: white;
+    @include logo-title-low;
+    font-size: clamp(1.563rem, 1.428rem + 0.67vw, 2rem);
+    font-weight: 300;
+  }
+
+  &__theme button {
+    border: 1px solid rgba(255, 255, 255, 0.718);
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: clamp(6.25rem, 5.288rem + 4.81vw, 9.375rem);
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(0.813rem, 0.774rem + 0.19vw, 0.938rem);
+  }
+}
+
+.menu {
+  z-index: 9;
+  @media (max-width: 650px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    transform: translateX(-100%);
+    display: block;
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.938rem, 0.553rem + 1.92vw, 2.188rem);
+    @include settings-general;
+    font-size: clamp(0.813rem, 0.716rem + 0.48vw, 1.125rem);
+    @media (max-width: 650px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%; // Вирівнюємо елементи по центру
+      gap: clamp(1.875rem, 1.435rem + 2.2vw, 3.125rem);
+    }
+  }
+
+  &__link {
+    color: white;
+  }
+}
