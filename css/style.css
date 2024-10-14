@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./addition/_reset.css";
+@import "./addition/reset.css";
 .header {
   position: relative;
 }
