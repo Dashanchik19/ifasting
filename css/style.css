@@ -1,7 +1,8 @@
-@charset "UTF-8";
 @import "./addition/reset.css";
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
 }
 .header__burger-menu {
   position: relative;
@@ -123,34 +124,53 @@
 
 .main {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
+  padding: 50px 0 0px 0;
+  overflow: hidden;
 }
 .main .half-orange {
   position: absolute;
   content: "";
-  background-image: url("/img/main/Group 835 (1).png");
+  background-image: url("../img/main/Group 835 (1).png");
   background-repeat: no-repeat;
   background-size: contain;
-  top: -50px;
-  right: -400px;
-  bottom: -200px;
-  width: 1000px;
-  width: 55%;
-  height: 100vh;
+  top: -30px;
+  right: -490px;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 798px) {
+  .main .half-orange {
+    right: -300px;
+    max-width: 700px;
+  }
+}
+@media (max-width: 500px) {
+  .main .half-orange {
+    right: -200px;
+    max-width: 700px;
+  }
 }
 .main .iphone {
   position: absolute;
   content: "";
-  background-image: url("../img/Слой 2.png");
+  background-image: url("../img/main/main-phone.png");
   background-repeat: no-repeat;
   background-size: contain;
   max-width: clamp(15.625rem, 7.74rem + 39.42vw, 41.25rem);
   width: 100%;
   height: 100%;
-  top: clamp(1.875rem, 1.106rem + 3.85vw, 4.375rem);
+  top: clamp(3.438rem, 3.183rem + 1.27vw, 4.375rem);
+  top: 100px;
   right: 30px;
   z-index: 9;
+}
+@media (max-width: 650px) {
+  .main .iphone {
+    right: 10px;
+    top: 70px;
+  }
 }
 .main__wrapper {
   position: relative;
@@ -364,12 +384,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 195px;
+  max-width: 195px;
+  width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
-  background-image: url("/img/OBJECTS (1).png");
+  background-image: url("../img/users/strawberry.png");
   z-index: 1;
 }
 @media (max-width: 945px) {

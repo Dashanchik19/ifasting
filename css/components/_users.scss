@@ -1,18 +1,17 @@
 .users {
   position: relative;
   background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
-  // margin-top: 100px;
-  // height: 590px;
   .strawberry {
     position: absolute;
     left: 0;
     top: 0;
-    width: 195px;
+    max-width: 195px;
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    background-image: url("/img/OBJECTS\ \(1\).png");
+    background-image: url("../img/users/strawberry.png");
     z-index: 1;
     @media (max-width: 945px) {
       display: none;

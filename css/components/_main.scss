@@ -1,34 +1,49 @@
 .main {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
+  padding: 50px 0 0px 0;
+  overflow: hidden;
   .half-orange {
     position: absolute;
     content: "";
-    background-image: url("/img/main/Group\ 835\ \(1\).png");
+    background-image: url("../img/main/Group 835 (1).png");
     background-repeat: no-repeat;
     background-size: contain;
-    top: -50px;
-    right: -400px;
-    bottom: -200px;
-    width: 1000px;
-    width: 55%;
-    height: 100vh;
+    top: -30px;
+    right: -490px;
+    max-width: 1000px;
+    width: 100%;
+    // height: calc(100% + 80px);
+    height: 100%;
+    @media (max-width: 798px) {
+      right: -300px;
+      max-width: 700px;
+    }
+
+    @media (max-width: 500px) {
+      right: -200px;
+      max-width: 700px;
+    }
   }
 
   .iphone {
     position: absolute;
     content: "";
-    background-image: url("../img/Слой\ 2.png");
+    background-image: url("../img/main/main-phone.png");
     background-repeat: no-repeat;
     background-size: contain;
     //660 = 250
     max-width: clamp(15.625rem, 7.74rem + 39.42vw, 41.25rem);
     width: 100%;
     height: 100%;
-    top: clamp(1.875rem, 1.106rem + 3.85vw, 4.375rem);
+    top: clamp(3.438rem, 3.183rem + 1.27vw, 4.375rem);
+    top: 100px;
     right: 30px;
     z-index: 9;
+    @media (max-width: 650px) {
+      right: 10px;
+      top: 70px;
+    }
   }
 
   &__wrapper {
