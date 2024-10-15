@@ -63,13 +63,10 @@
   &__title {
     @include logo-title-low;
     font-size: clamp(1.875rem, 1.221rem + 3.27vw, 4rem);
-    // line-height: clamp(2.25rem, 1.442rem + 4.04vw, 4.875rem);
     max-width: clamp(11.438rem, 1.918rem + 47.6vw, 42.375rem);
     width: 100%;
     margin-bottom: 25px;
     color: white;
-    // padding: 0;
-    // margin: 0;
   }
 
   &__descript {
@@ -85,6 +82,28 @@
   &__buttons {
     display: flex;
     gap: clamp(0.625rem, 0.24rem + 1.92vw, 1.875rem);
+
+    .mac {
+      position: relative;
+      z-index: 9;
+      .main-orange {
+        position: absolute;
+        content: "";
+        background-image: url("/img/features/main-light-orange-small.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -60px;
+        left: -40px;
+        width: 150px;
+        height: 150px;
+        z-index: -1;
+        display: none;
+
+        @media (max-width: 650px) {
+          display: block;
+        }
+      }
+    }
 
     .mac img {
       max-width: 250px;

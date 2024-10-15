@@ -117,6 +117,8 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
     gap: clamp(1.875rem, 1.435rem + 2.2vw, 3.125rem);
   }
 }
@@ -214,6 +216,28 @@
   display: flex;
   gap: clamp(0.625rem, 0.24rem + 1.92vw, 1.875rem);
 }
+.main__buttons .mac {
+  position: relative;
+  z-index: 9;
+}
+.main__buttons .mac .main-orange {
+  position: absolute;
+  content: "";
+  background-image: url("/img/features/main-light-orange-small.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -60px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  display: none;
+}
+@media (max-width: 650px) {
+  .main__buttons .mac .main-orange {
+    display: block;
+  }
+}
 .main__buttons .mac img {
   max-width: 250px;
   width: 100%;
@@ -274,7 +298,7 @@
 }
 @media (max-width: 650px) {
   .features .orange {
-    top: -240px;
+    display: none;
   }
 }
 .features__buttons {
@@ -316,7 +340,7 @@
 }
 @media (max-width: 650px) {
   .features__image {
-    max-width: 250px;
+    max-width: 200px;
   }
 }
 
@@ -335,8 +359,8 @@
   gap: 20px;
 }
 .benefits__block img {
-  height: 45px;
-  width: 35px;
+  height: clamp(2.188rem, 2.018rem + 0.85vw, 2.813rem);
+  width: clamp(1.563rem, 1.393rem + 0.85vw, 2.188rem);
   object-fit: contain;
 }
 @media (max-width: 650px) {
@@ -839,7 +863,34 @@
 .background.light .header .ananas {
   display: none;
 }
+.background.light .header__burger-menu span {
+  background: linear-gradient(164.23deg, #064d5e 0%, #00546d 20.18%, #013050 59.04%, #003054 93.86%);
+}
+.background.light .google-play {
+  position: relative;
+}
+.background.light .google-play .main-orange {
+  position: absolute;
+  content: "";
+  background-image: url("/img/features/main-light-orange-small.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -60px;
+  left: 70px;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  display: none;
+}
+@media (max-width: 650px) {
+  .background.light .google-play .main-orange {
+    display: block;
+  }
+}
 .background.light .main .half-orange {
+  display: none;
+}
+.background.light .main-orange {
   display: none;
 }
 .background.light .main-light-orange {
@@ -849,10 +900,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   top: -30px;
-  left: -25%;
+  left: -20%;
   max-width: 1000px;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1400px) {
+  .background.light .main-light-orange {
+    left: -250px;
+    max-width: 800px;
+  }
 }
 @media (max-width: 798px) {
   .background.light .main-light-orange {
@@ -880,6 +937,40 @@
 }
 @media (max-width: 798px) {
   .background.light .main-light-ananas {
+    display: none;
+  }
+}
+.background.light .main-light-orange-small {
+  position: absolute;
+  content: "";
+  background-image: url("../img/features/main-light-orange-small.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 427px;
+  width: 100%;
+  height: 555px;
+  z-index: 1;
+  bottom: -100px;
+}
+@media (max-width: 1550px) {
+  .background.light .main-light-orange-small {
+    max-width: 327px;
+    height: 455px;
+    left: 55%;
+  }
+}
+@media (max-width: 1150px) {
+  .background.light .main-light-orange-small {
+    max-width: clamp(7.5rem, 5.686rem + 9.07vw, 14.188rem);
+    height: clamp(9.375rem, 6.833rem + 12.71vw, 18.75rem);
+    left: 60%;
+    bottom: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .background.light .main-light-orange-small {
     display: none;
   }
 }

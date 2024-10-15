@@ -105,7 +105,11 @@
       justify-content: center;
       align-items: center;
       height: 100%; // Вирівнюємо елементи по центру
+      font-weight: 600;
+      text-transform: uppercase;
       gap: clamp(1.875rem, 1.435rem + 2.2vw, 3.125rem);
+      a {
+      }
     }
   }
 
