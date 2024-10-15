@@ -625,6 +625,24 @@
   height: 100%;
   z-index: 0;
 }
+@media (max-width: 800px) {
+  .manage__orange {
+    right: -350px;
+    bottom: -200px;
+  }
+}
+@media (max-width: 670px) {
+  .manage__orange {
+    right: -250px;
+    bottom: -300px;
+  }
+}
+@media (max-width: 500px) {
+  .manage__orange {
+    right: -150px;
+    bottom: -250px;
+  }
+}
 .manage__blocks {
   position: relative;
   padding: clamp(3.438rem, -0.376rem + 19.07vw, 17.5rem) 0 clamp(2.188rem, 0.069rem + 10.59vw, 10rem) clamp(0rem, -2.712rem + 13.56vw, 10rem);
