@@ -61,12 +61,15 @@
   }
 
   &__theme button {
-    border: 1px solid rgba(255, 255, 255, 0.718);
+    // border: 1px solid rgba(255, 255, 255, 0.718);
     text-transform: uppercase;
     padding: 10px 0;
     width: clamp(6.25rem, 5.288rem + 4.81vw, 9.375rem);
-    color: white;
+    color: #01405d;
     font-family: Montserrat, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
     font-size: clamp(0.813rem, 0.774rem + 0.19vw, 0.938rem);
   }
 }

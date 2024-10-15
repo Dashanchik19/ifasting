@@ -102,3 +102,18 @@ document.addEventListener("DOMContentLoaded", function () {
     showBlock(currentIndex);
   });
 });
+
+/* Change theame */
+
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  const background = document.querySelector(".background");
+  background.classList.toggle("light");
+
+  // Змінюємо текст кнопки при зміні теми
+  const button = this;
+  if (background.classList.contains("light")) {
+    button.textContent = "light theme";
+  } else {
+    button.textContent = "dark theme";
+  }
+});
