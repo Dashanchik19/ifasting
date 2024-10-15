@@ -537,8 +537,39 @@
   background-image: url("/img/manage/cherry.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 400px;
-  height: 312px;
+  max-width: 350px;
+  width: 100%;
+  height: 250px;
+  z-index: 0;
+}
+@media (max-width: 1550px) {
+  .manage .cherry {
+    max-width: 300px;
+    height: 220px;
+  }
+}
+@media (max-width: 1380px) {
+  .manage .cherry {
+    max-width: 250px;
+    height: 180px;
+  }
+}
+@media (max-width: 1310px) {
+  .manage .cherry {
+    max-width: 200px;
+    height: 150px;
+  }
+}
+@media (max-width: 1135px) {
+  .manage .cherry {
+    max-width: 180px;
+    height: 120px;
+  }
+}
+@media (max-width: 945px) {
+  .manage .cherry {
+    display: none;
+  }
 }
 .manage__phone {
   position: absolute;
@@ -549,23 +580,82 @@
   background-size: contain;
   max-width: 1200px;
   width: 100%;
-  height: 1500px;
-  z-index: 9;
+  height: 100%;
+  z-index: 1;
+}
+@media (max-width: 1600px) {
+  .manage__phone {
+    right: -180px;
+  }
+}
+@media (max-width: 1445px) {
+  .manage__phone {
+    right: -350px;
+  }
+}
+@media (max-width: 1057px) {
+  .manage__phone {
+    right: -300px;
+    height: 1400px;
+    width: 1000px;
+  }
+}
+@media (max-width: 765px) {
+  .manage__phone {
+    right: -250px;
+    height: clamp(40.625rem, 34.693rem + 29.66vw, 62.5rem);
+    width: clamp(46.875rem, 44.333rem + 12.71vw, 56.25rem);
+  }
+}
+@media (max-width: 525px) {
+  .manage__phone {
+    right: -270px;
+    width: 700px;
+  }
 }
 .manage__orange {
   position: absolute;
-  right: -500px;
-  bottom: -400px;
+  right: -450px;
+  bottom: -250px;
   background-image: url("/img/manage/manage-orange.png");
   background-repeat: no-repeat;
   background-size: contain;
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 0;
 }
 .manage__blocks {
-  padding: 280px 0 200px 160px;
+  position: relative;
+  padding: clamp(3.438rem, -0.376rem + 19.07vw, 17.5rem) 0 clamp(2.188rem, 0.069rem + 10.59vw, 10rem) clamp(0rem, -2.712rem + 13.56vw, 10rem);
+  z-index: 1;
+}
+.manage__descript {
+  max-width: clamp(9.813rem, 3.796rem + 30.08vw, 32rem);
+  width: 100%;
+}
+@media (max-width: 945px) {
+  .manage__descript {
+    margin-bottom: 20px;
+  }
+}
+.manage__buttons {
+  display: flex;
+  width: 100%;
+}
+.manage__buttons .mac {
+  max-width: clamp(11.125rem, 9.871rem + 6.27vw, 15.75rem);
+  width: 100%;
+}
+.manage__buttons .google-play {
+  max-width: clamp(8.813rem, 7.728rem + 5.42vw, 12.813rem);
+  width: 100%;
+}
+@media (max-width: 945px) {
+  .manage__buttons {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .footer {
