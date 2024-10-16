@@ -41,7 +41,6 @@
     position: absolute;
     right: 0px;
     top: 0px;
-    // bottom: 0;
     background-image: url("../img/manage/manage.phone.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -72,7 +71,6 @@
     }
 
     @media (max-width: 525px) {
-      // top: -50px;
       right: -270px;
       width: 700px;
     }
@@ -81,14 +79,12 @@
   &__orange {
     position: absolute;
     right: -450px;
-    // right: 0;
     bottom: -250px;
     background-image: url("../img/manage/manage-orange.png");
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 900px;
     width: 100%;
-    // background-color: aliceblue;
     height: 100%;
     z-index: 0;
     @media (max-width: 800px) {

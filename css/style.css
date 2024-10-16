@@ -13,7 +13,6 @@
   z-index: 9999;
 }
 .header__burger-menu span {
-  background-color: red;
   width: 30px;
   height: 5px;
   border-radius: 100px;
@@ -65,6 +64,7 @@
   text-align: left;
   font-size: clamp(1.563rem, 1.428rem + 0.67vw, 2rem);
   font-weight: 300;
+  cursor: pointer;
 }
 .header__theme button {
   text-transform: uppercase;
@@ -88,7 +88,7 @@
     left: 0;
     height: 100vh;
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(1, 62, 91);
     backdrop-filter: blur(15px);
     z-index: 1000;
     transform: translateX(-100%);
@@ -884,6 +884,11 @@
 }
 .background.light .header__burger-menu span {
   background: linear-gradient(164.23deg, #064d5e 0%, #00546d 20.18%, #013050 59.04%, #003054 93.86%);
+}
+@media (max-width: 650px) {
+  .background.light .header .menu {
+    background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
+  }
 }
 .background.light .google-play {
   position: relative;

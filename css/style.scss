@@ -93,6 +93,12 @@
           );
         }
       }
+
+      .menu {
+        @media (max-width: 650px) {
+          background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
+        }
+      }
     }
 
     .google-play {

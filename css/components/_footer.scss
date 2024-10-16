@@ -41,7 +41,6 @@
   &__logo-second {
     text-transform: uppercase;
     @include logo-title-low;
-    // font-size: clamp(1.563rem, 1.428rem + 0.67vw, 2rem);
     font-weight: 300;
     text-align: center;
     display: none;
@@ -88,7 +87,6 @@
     @include settings-general;
     margin-top: 10px;
     text-align: center;
-    // font-size: clamp(0.813rem, 0.716rem + 0.48vw, 1.125rem);
     color: black;
     font-style: 18px;
   }

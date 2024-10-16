@@ -29,7 +29,6 @@
     color: white;
     @include title-general;
     font-size: clamp(1.875rem, 1.299rem + 2.88vw, 4rem);
-    // line-height: 1.1;
     line-height: 0.8;
   }
 
