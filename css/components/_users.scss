@@ -19,13 +19,18 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__title {
     z-index: 99;
     text-align: center;
     color: white;
     @include title-general;
     font-size: clamp(1.875rem, 1.299rem + 2.88vw, 4rem);
-    line-height: 0;
+    // line-height: 1.1;
+    line-height: 0.8;
   }
 
   &__blocks {
@@ -99,15 +104,21 @@
   }
 
   &__buttons {
-    display: none;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    display: flex;
     align-items: center;
+    gap: 30px;
     padding-bottom: 30px;
 
     @media (max-width: 565px) {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
+      top: 0;
     }
 
     i {

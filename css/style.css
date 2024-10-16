@@ -264,6 +264,11 @@
     margin-top: -150px;
   }
 }
+@media (max-width: 400px) {
+  .features {
+    margin-top: -100px;
+  }
+}
 .features__blocks {
   display: flex;
   justify-content: space-between;
@@ -316,16 +321,16 @@
   }
   .features__buttons .btn-left-2,
   .features__buttons .btn-right-2 {
-    font-size: 2rem;
+    font-size: 40px;
     color: #ffffff;
     cursor: pointer;
     position: absolute;
   }
   .features__buttons .btn-left-2 {
-    left: -40px;
+    left: -50px;
   }
   .features__buttons .btn-right-2 {
-    right: -40px;
+    right: -50px;
   }
 }
 .features__image {
@@ -424,6 +429,9 @@
     display: none;
   }
 }
+.users__wrapper {
+  position: relative;
+}
 .users__title {
   z-index: 99;
   text-align: center;
@@ -433,7 +441,7 @@
   font-weight: 800;
   line-height: 78.02px;
   font-size: clamp(1.875rem, 1.299rem + 2.88vw, 4rem);
-  line-height: 0;
+  line-height: 0.8;
 }
 .users__blocks {
   display: grid;
@@ -508,16 +516,22 @@
   }
 }
 .users__buttons {
-  display: none;
+  position: absolute;
+  top: 85px;
+  right: 0px;
+  display: flex;
   align-items: center;
+  gap: 30px;
   padding-bottom: 30px;
 }
 @media (max-width: 565px) {
   .users__buttons {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    top: 0;
   }
 }
 .users__buttons i {
