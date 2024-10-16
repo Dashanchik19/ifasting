@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
-  padding: 64px 0 30px 0;
+  padding: clamp(1.563rem, 0.901rem + 3.31vw, 4rem) 0 35px 0;
 
   &__blocks {
     display: flex;
@@ -68,7 +68,6 @@
     .mac img {
       max-width: 250px;
       width: 100%;
-      // height: clamp(2.5rem, 2.115rem + 1.92vw, 3.75rem);
       -webkit-user-drag: none;
       user-drag: none;
     }
@@ -76,7 +75,6 @@
     .google-play img {
       max-width: 205px;
       width: 100%;
-      // height: clamp(2.5rem, 2.115rem + 1.92vw, 3.75rem);
       -webkit-user-drag: none;
       user-drag: none;
     }
@@ -90,7 +88,8 @@
     @include settings-general;
     margin-top: 10px;
     text-align: center;
-    font-size: clamp(0.813rem, 0.716rem + 0.48vw, 1.125rem);
+    // font-size: clamp(0.813rem, 0.716rem + 0.48vw, 1.125rem);
     color: black;
+    font-style: 18px;
   }
 }

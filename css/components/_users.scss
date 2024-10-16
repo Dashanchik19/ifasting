@@ -1,6 +1,7 @@
 .users {
   position: relative;
   background: linear-gradient(170.4deg, #ffa800 10.28%, #e28505 93.01%);
+  padding-top: clamp(2.188rem, 1.933rem + 1.27vw, 3.125rem);
   .strawberry {
     position: absolute;
     left: 0;
@@ -24,6 +25,7 @@
     color: white;
     @include title-general;
     font-size: clamp(1.875rem, 1.299rem + 2.88vw, 4rem);
+    line-height: 0;
   }
 
   &__blocks {
@@ -33,6 +35,7 @@
     gap: clamp(1.25rem, 1.047rem + 1.02vw, 2rem);
     padding-bottom: 100px;
     z-index: 9;
+    padding-top: clamp(1.563rem, 1.139rem + 2.12vw, 3.125rem);
     @media (max-width: 945px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -40,6 +43,8 @@
     @media (max-width: 565px) {
       grid-template-columns: repeat(1, 1fr);
       margin: 0 auto;
+      width: 335px;
+      height: 366px;
       width: 100%;
       justify-content: center;
       padding-bottom: 30px;
@@ -68,7 +73,7 @@
       margin-bottom: clamp(0.938rem, 0.853rem + 0.42vw, 1.25rem);
       color: white;
       @include logo-title-low;
-      font-size: clamp(0.938rem, 0.649rem + 1.44vw, 2rem);
+      font-size: clamp(1.563rem, 1.444rem + 0.59vw, 2rem);
     }
 
     p {
@@ -80,7 +85,7 @@
 
       @media (max-width: 1550px) {
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.3;
       }
     }
 
@@ -96,7 +101,6 @@
   &__buttons {
     display: none;
     align-items: center;
-    // margin-top: 40px;
     padding-bottom: 30px;
 
     @media (max-width: 565px) {
@@ -107,7 +111,7 @@
     }
 
     i {
-      font-size: 35px;
+      font-size: 40px;
       color: white;
       cursor: pointer;
     }
@@ -122,22 +126,15 @@
     flex-direction: column;
     align-content: flex-end;
     margin-top: 10px;
-    // padding-top: 70px;
     .someone {
-      font-family: Montserrat;
-      font-size: clamp(0.938rem, 0.751rem + 0.93vw, 1.625rem);
-      font-weight: 800;
+      @include logo-title-low;
+      font-size: clamp(1.375rem, 1.206rem + 0.85vw, 2rem);
       line-height: 31.69px;
-      text-align: left;
       color: white;
     }
 
     .date {
-      font-family: Montserrat;
-      font-size: clamp(0.813rem, 0.728rem + 0.42vw, 1.125rem);
-      font-weight: 400;
-      line-height: 27px;
-      text-align: left;
+      @include settings-general;
       color: #e58805;
     }
   }
@@ -145,6 +142,6 @@
   &__title {
     margin: 0 auto;
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
