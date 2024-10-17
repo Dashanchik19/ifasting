@@ -35,7 +35,6 @@
     width: clamp(5rem, 4.038rem + 4.81vw, 8.125rem);
     height: clamp(8.125rem, 6.875rem + 6.25vw, 12.188rem);
     @media (max-width: 1625px) {
-      opacity: 0.7;
     }
     @media (max-width: 798px) {
       display: none;
