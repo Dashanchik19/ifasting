@@ -86,7 +86,6 @@
     margin: 0 auto;
     display: flex;
     border-radius: 50%;
-    // background-color: #ffffff;
     background-color: transparent;
     @media (max-width: 650px) {
       max-width: 250px;
@@ -112,6 +111,9 @@
   display: flex;
   flex-direction: column;
   // 60 = 10
+  @media (max-width: 650px) {
+    gap: 35px;
+  }
   gap: clamp(0.625rem, -0.222rem + 4.24vw, 3.75rem);
   justify-content: center;
   &__block {
@@ -125,14 +127,6 @@
       height: 45px;
       width: 35px;
       object-fit: contain;
-    }
-    @media (max-width: 650px) {
-      display: none;
-
-      &.active {
-        display: flex;
-        margin: 0 auto;
-      }
     }
   }
 
