@@ -103,18 +103,20 @@
     }
   }
 
+  &__title {
+    // font-size: 64px;
+  }
   &__blocks {
     position: relative;
     padding: clamp(3.438rem, -0.376rem + 19.07vw, 17.5rem) 0
       clamp(2.188rem, 0.069rem + 10.59vw, 10rem)
       clamp(0rem, -2.712rem + 13.56vw, 10rem);
     z-index: 1;
-    @media (max-width: 945px) {
-    }
   }
 
   &__descript {
     max-width: clamp(9.813rem, 3.796rem + 30.08vw, 32rem);
+    font-size: 18px;
     width: 100%;
     @media (max-width: 945px) {
       margin-bottom: 20px;

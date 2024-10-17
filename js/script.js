@@ -73,35 +73,35 @@ blocks.forEach((block) => {
 
 // Функція для відслідковування свайпів features
 
-document.addEventListener("DOMContentLoaded", function () {
-  const leftButton = document.querySelector(".btn-left-2");
-  const rightButton = document.querySelector(".btn-right-2");
-  const blocks = document.querySelectorAll(".benefits__block");
-  let currentIndex = 0;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const leftButton = document.querySelector(".btn-left-2");
+//   const rightButton = document.querySelector(".btn-right-2");
+//   const blocks = document.querySelectorAll(".benefits__block");
+//   let currentIndex = 0;
 
-  function showBlock(index) {
-    // Прибираємо клас "active" з усіх блоків
-    blocks.forEach((block) => block.classList.remove("active"));
-    // Додаємо клас "active" до блоку за індексом
-    blocks[index].classList.add("active");
-  }
+//   function showBlock(index) {
+//     // Прибираємо клас "active" з усіх блоків
+//     blocks.forEach((block) => block.classList.remove("active"));
+//     // Додаємо клас "active" до блоку за індексом
+//     blocks[index].classList.add("active");
+//   }
 
-  leftButton.addEventListener("click", function () {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = blocks.length - 1;
-    }
-    showBlock(currentIndex);
-  });
+//   leftButton.addEventListener("click", function () {
+//     currentIndex--;
+//     if (currentIndex < 0) {
+//       currentIndex = blocks.length - 1;
+//     }
+//     showBlock(currentIndex);
+//   });
 
-  rightButton.addEventListener("click", function () {
-    currentIndex++;
-    if (currentIndex >= blocks.length) {
-      currentIndex = 0;
-    }
-    showBlock(currentIndex);
-  });
-});
+//   rightButton.addEventListener("click", function () {
+//     currentIndex++;
+//     if (currentIndex >= blocks.length) {
+//       currentIndex = 0;
+//     }
+//     showBlock(currentIndex);
+//   });
+// });
 
 /* Change theame */
 
