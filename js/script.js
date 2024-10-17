@@ -117,3 +117,24 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
     button.textContent = "light theme";
   }
 });
+
+//
+
+document.querySelectorAll(".menu__link, .footer__link").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    const headerHeight = document.querySelector(".header").offsetHeight;
+    const topOffset =
+      targetSection.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      50;
+
+    window.scrollTo({
+      top: topOffset,
+    });
+  });
+});
