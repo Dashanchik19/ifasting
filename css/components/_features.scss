@@ -49,43 +49,61 @@
   // &__buttons {
   //   display: none;
   //   @media (max-width: 650px) {
-  //     // display: flex;
-  //     // justify-content: space-between;
-  //     // position: absolute;
-  //     // top: 50%;
-  //     // left: 0;
-  //     // right: 0;
-  //     // transform: translateY(-50%);
-  //     // width: 100%;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 0;
+  //     right: 0;
+  //     transform: translateY(-50%);
+  //     width: 100%;
 
-  //     // .btn-left-2,
-  //     // .btn-right-2 {
-  //     //   font-size: 40px;
-  //     //   color: #ffffff;
-  //     //   cursor: pointer;
-  //     //   position: absolute;
-  //     // }
+  //     .btn-left-2,
+  //     .btn-right-2 {
+  //       font-size: 40px;
+  //       color: #ffffff;
+  //       cursor: pointer;
+  //       position: absolute;
+  //     }
 
-  //     // .btn-left-2 {
-  //     //   left: -50px;
-  //     // }
+  //     .btn-left-2 {
+  //       left: -50px;
+  //     }
 
-  //     // .btn-right-2 {
-  //     //   right: -50px;
-  //     // }
+  //     .btn-right-2 {
+  //       right: -50px;
+  //     }
   //   }
   // }
 
   &__image {
     position: relative;
-    max-width: 300px;
+    max-width: 350px;
     width: 100%;
-    height: 80%;
+    height: 50%;
+    // height: 500px;
     z-index: 99;
     margin: 0 auto;
     display: flex;
+    border-radius: 50%;
+    // background-color: #ffffff;
+    background-color: transparent;
     @media (max-width: 650px) {
       max-width: 250px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0px; /* Зміщуємо тінь на праву сторону */
+      bottom: 0;
+      left: 0;
+      border-radius: 20%;
+      z-index: -1;
+      box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.5); /* Тінь праворуч */
+      left: 0;
+      z-index: -1;
+      box-shadow: 35px 30px 30px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -93,8 +111,8 @@
 .benefits {
   display: flex;
   flex-direction: column;
-  // 60 = 40
-  gap: clamp(2.5rem, 2.161rem + 1.69vw, 3.75rem);
+  // 60 = 10
+  gap: clamp(0.625rem, -0.222rem + 4.24vw, 3.75rem);
   justify-content: center;
   &__block {
     display: flex;
@@ -108,14 +126,14 @@
       width: 35px;
       object-fit: contain;
     }
-    // @media (max-width: 650px) {
-    //   display: none;
+    @media (max-width: 650px) {
+      display: none;
 
-    //   // &.active {
-    //   //   display: flex;
-    //   //   margin: 0 auto;
-    //   // }
-    // }
+      &.active {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__text {
